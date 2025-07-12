@@ -10,7 +10,14 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors({ origin: "https://task-master-sooty.vercel.app", credentials: true }));
+
+app.set("trust proxy", 1);
+
+app.use(cors({
+  origin: "https://task-master-sooty.vercel.app",
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(cookieParser());
 
