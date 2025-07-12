@@ -18,7 +18,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 
 app.get("/", (req, res) => {
-  res.send("FlowAPI backend is running ✅");
+  res.send("TaskMaster backend is running ✅");
 });
 
 const PORT = process.env.PORT || 5000;
